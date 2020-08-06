@@ -16,4 +16,6 @@ export { useUserPreferences } from './user-preferences/use-user-preferences';
 export { OPTIONS_STORE_NAME } from './options';
 export { withOptionsHydration } from './options/with-options-hydration';
 
+export { EXPORT_STORE_NAME } from './export';
+
 export { __experimentalResolveSelect } from './registry';
