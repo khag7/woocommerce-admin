@@ -28,7 +28,11 @@ import {
 	generateCSVDataFromTable,
 	generateCSVFileName,
 } from '@woocommerce/csv-export';
-import { EXPORT_STORE_NAME, SETTINGS_STORE_NAME, useUserPreferences } from '@woocommerce/data';
+import {
+	EXPORT_STORE_NAME,
+	SETTINGS_STORE_NAME,
+	useUserPreferences,
+} from '@woocommerce/data';
 
 /**
  * Internal dependencies
