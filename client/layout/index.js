@@ -8,11 +8,12 @@ import { Router, Route, Switch } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import { get, isFunction, identity } from 'lodash';
 import { parse } from 'qs';
+import { withFilters } from '@wordpress/components';
 
 /**
  * WooCommerce dependencies
  */
-import { useFilters, Spinner } from '@woocommerce/components';
+import { Spinner } from '@woocommerce/components';
 import { getHistory } from '@woocommerce/navigation';
 import { getSetting } from '@woocommerce/wc-admin-settings';
 import {
@@ -221,8 +222,9 @@ class _PageLayout extends Component {
 }
 
 export const PageLayout = compose(
-	// Use the useFilters HoC so PageLayout is re-rendered when filters are used to add new pages or reports
-	useFilters( [ PAGES_FILTER, REPORTS_FILTER ] ),
+	// Use the withFilters HoC so PageLayout is re-rendered when filters are used to add new pages or reports
+	withFilters( PAGES_FILTER ),
+	withFilters( REPORTS_FILTER ),
 	window.wcSettings.preloadOptions
 		? withOptionsHydration( {
 				...window.wcSettings.preloadOptions,

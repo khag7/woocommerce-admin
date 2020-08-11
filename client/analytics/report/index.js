@@ -5,11 +5,11 @@ import { Component } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import PropTypes from 'prop-types';
 import { find } from 'lodash';
+import { withFilters } from '@wordpress/components';
 
 /**
  * WooCommerce dependencies
  */
-import { useFilters } from '@woocommerce/components';
 import { getQuery, getSearchWords } from '@woocommerce/navigation';
 
 /**
@@ -92,7 +92,7 @@ Report.propTypes = {
 };
 
 export default compose(
-	useFilters( REPORTS_FILTER ),
+	withFilters( REPORTS_FILTER ),
 	withSelect( ( select, props ) => {
 		const query = getQuery();
 		const { search } = query;

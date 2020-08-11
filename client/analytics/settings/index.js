@@ -2,7 +2,7 @@
  * External dependencies
  */
 import { __ } from '@wordpress/i18n';
-import { Button } from '@wordpress/components';
+import { Button, withFilters } from '@wordpress/components';
 import { Fragment, useEffect, useRef } from '@wordpress/element';
 import { compose } from '@wordpress/compose';
 import { withDispatch } from '@wordpress/data';
@@ -10,7 +10,7 @@ import { withDispatch } from '@wordpress/data';
 /**
  * WooCommerce dependencies
  */
-import { SectionHeader, useFilters, ScrollTo } from '@woocommerce/components';
+import { SectionHeader, ScrollTo } from '@woocommerce/components';
 import { useSettings } from '@woocommerce/data';
 
 /**
@@ -180,4 +180,4 @@ export default compose(
 			createNotice,
 		};
 	} )
-)( useFilters( SETTINGS_FILTER )( Settings ) );
+)( withFilters( SETTINGS_FILTER )( Settings ) );
