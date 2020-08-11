@@ -1,3 +1,7 @@
+# 5.1.0 (unreleased)
+
+-   Deprecate our bespoke component `useFilters` in favor of using the WordPress variety `withFilters`.
+
 # 5.0.0
 
 -   Added `<Timeline />` component.
