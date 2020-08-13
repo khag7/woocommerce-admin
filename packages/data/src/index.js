@@ -20,4 +20,6 @@ export { REVIEWS_STORE_NAME } from './reviews';
 
 export { NOTES_STORE_NAME } from './notes';
 
+export { IMPORT_STORE_NAME } from './import';
+
 export { __experimentalResolveSelect } from './registry';
